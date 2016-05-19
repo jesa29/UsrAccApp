@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <constant name="struts.devMode" value="true"/>
+
+    <package name="useracc" extends="json-default">
+        <result-types>
+            <result-type name="json" class="org.apache.struts2.json.JSONResult" default="false"/>
+        </result-types>
+        <interceptors>
+            <interceptor name="json" class="org.apache.struts2.json.JSONInterceptor"/>
+        </interceptors>
+        <action name="addUser" method="execute" class="action.AddUser">
+            <result type="json"/>
+            <interceptor-ref name="json"/>
+        </action>
+        <action name="listUsers" method="execute" class="action.ListUsers">
+            <result type="json">
+                <param name="noCache">true</param>
+                <param name="excludeNullProperties">true</param>
+                <param name="root">users</param>
+            </result>
+        </action>
+        <action name="deleteUser" method="execute" class="action.DeleteUser">
+            <result type="json"/>
+            <interceptor-ref name="json"/>
+        </action>
+        <action name="updateUser" method="execute" class="action.UpdateUser">
+            <result type="json"/>
+            <interceptor-ref name="json"/>
+        </action>
+    </package>
+</struts>

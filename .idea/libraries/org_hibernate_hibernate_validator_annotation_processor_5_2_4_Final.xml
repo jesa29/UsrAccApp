@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="org.hibernate:hibernate-validator-annotation-processor:5.2.4.Final" type="repository">
+    <properties maven-id="org.hibernate:hibernate-validator-annotation-processor:5.2.4.Final" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/webapp/WEB-INF/lib/hibernate-validator-annotation-processor-5.2.4.Final.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
